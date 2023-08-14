@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/31/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/14/CFD-Mathematics-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -176,7 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/07/31/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2023/08/14/CFD-Mathematics-1/" class="post-title-link" itemprop="url">CFD Mathematics 1</a>
         </h2>
 
         <div class="post-meta">
@@ -186,8 +186,15 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2023-07-31 00:38:15" itemprop="dateCreated datePublished" datetime="2023-07-31T00:38:15+01:00">2023-07-31</time>
+              <time title="Created: 2023-08-14 23:43:31" itemprop="dateCreated datePublished" datetime="2023-08-14T23:43:31+01:00">2023-08-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-08-15 00:38:43" itemprop="dateModified" datetime="2023-08-15T00:38:43+01:00">2023-08-15</time>
+              </span>
 
           
 
@@ -200,19 +207,398 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <h1 id="basic-mathematics">Basic Mathematics</h1>
+<h2 id="einsteins-summation-convention">Einsteins Summation
+Convention</h2>
+<p>For vector and tensor equations, the longest but clearest notation is
+the Cartesian one. If the equation contains several similar terms which
+can be summed up , this notation can be abbreviated by applying the
+Einsteins summation convention.</p>
+<ul>
+<li><p>Cartesian form</p>
+<ul>
+<li><p>The Cartesian form is given by: <span class="math display">\[
+\frac{\partial \phi_x}{\partial x} + \frac{\partial \phi_y}{\partial y}
++\frac{\partial \phi_z}{\partial z}
+\]</span></p>
+<p>To simply this equation, the Einsteins summation convention can be
+applied. Commonly, the summation sign <span
+class="math inline">\(\sum\)</span> can be neglected to keep things
+clear:</p>
+<p><span class="math display">\[
+\sum_{i=1} \frac{\partial \phi_i}{\partial x_i} =
+\frac{\partial\phi_i}{\partial x_i} , i = x,y,z
+\]</span></p>
+<p>For example: <span class="math display">\[\sum_{i=1}^3 u_i u_i = u_i
+u_i = u_1u_1 + u_2u_2 + u_3u_3\]</span></p></li>
+</ul></li>
+<li><p>The rules of Einsteins Summation Convention</p>
+<ul>
+<li><p>If the subscript appears more than once in the same term, that
+means summation operation, and these subscripts are called dummy
+index</p>
+<ul>
+<li><p>the dot production of two vectors <span class="math display">\[
+  u_i u_i = u_1u_1 + u_2u_2 + u_3u_3
+  \]</span></p></li>
+<li><p>the derivative of velocity <span class="math display">\[
+  \frac{d u_i}{d x_i} = \frac{u_1}{x_1} + \frac{u_2}{x_2} +
+\frac{u_3}{x_3}
+  \]</span></p></li>
+</ul></li>
+<li><p>If there are two different subscript in one term, for the term
+which repeat appears, means summation operation, while for the subscript
+which appears once, traverse is performed for every axis.</p>
+<ul>
+<li><p>Exp1 <span class="math display">\[
+  u_j \frac{d u_i}{d x_i} = u_j \frac{d u_1}{d x_1} + u_j \frac{d u_2}{d
+x_2} + u_j \frac{d u_3}{d x_3} , (j = 1,2,3)
+  \]</span></p></li>
+<li><p>Exp2 <span class="math display">\[
+u_j \frac{d u_i}{d x_j} = u_1 \frac{d u_i}{d x_1} + u_2 \frac{d u_i}{d
+x_2} + u_3 \frac{d u_i}{x_3}, (i = 1,2,3)
+\]</span></p></li>
+</ul></li>
+<li><p>Taking N-S equation for an example $$</p>
+<span class="math display">\[\begin{cases}
+\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} +
+v\frac{\partial u}{\partial y} + w\frac{\partial u}{\partial z} = f_x -
+\frac{1}{\rho} \frac{\partial p}{\partial x} +
+\frac{\mu}{\rho}(\frac{\partial^2u}{\partial x^2} +
+\frac{\partial^2u}{\partial y^2} + \frac{\partial^2u}{\partial z^2}) \\
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+\frac{\partial v}{\partial t} + u\frac{\partial v}{\partial x} +
+v\frac{\partial v}{\partial y} + w\frac{\partial v}{\partial z} = f_y -
+\frac{1}{\rho} \frac{\partial p}{\partial y} +
+\frac{\mu}{\rho}(\frac{\partial^2v}{\partial x^2} +
+\frac{\partial^2v}{\partial y^2} + \frac{\partial^2v}{\partial z^2}) \\
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+\frac{\partial w}{\partial t} + u\frac{\partial w}{\partial x} +
+v\frac{\partial w}{\partial y} + w\frac{\partial w}{\partial z} = f_z -
+\frac{1}{\rho} \frac{\partial p}{\partial z} +
+\frac{\mu}{\rho}(\frac{\partial^2w}{\partial x^2} +
+\frac{\partial^2w}{\partial y^2} + \frac{\partial^2w}{\partial z^2})
+\end{cases}\]</span>
+<p>$$</p>
+<p>Every equations contain <span class="math inline">\(x,y,z\)</span>
+and <span class="math inline">\(u,v,w\)</span>, they are kind of
+notations and can be replaced by any other symbols. For example, <span
+class="math inline">\(x_1, x_2, x_3\)</span> and <span
+class="math inline">\(u_1, u_2, u_3\)</span> can be used to replace
+<span class="math inline">\(x,y,z\)</span> and <span
+class="math inline">\(u,v,w\)</span> respectively.</p>
+<p>Based on the discussion above, the N-S equation can be re-written in
+tensor form:</p>
+<p><span class="math display">\[
+\frac{\partial u_i}{\partial t} + u_j \frac{\partial u_i}{\partial x_j}
+= f_i - \frac{1}{\rho} \frac{\partial p}{\partial x_i} +
+\frac{\mu}{\rho} \frac{\partial^2 u_i}{\partial x^2_j}
+\]</span></p></li>
+</ul></li>
+</ul>
+<h2
+id="the-classification-of-concept----dot-product-inner-product-outer-product-cross-product">The
+classification of concept -- dot product, inner product, outer product,
+cross product</h2>
+<ul>
+<li><p>vector <span class="math inline">\(\mathbf{a}\)</span> and <span
+class="math inline">\(\mathbf{b}\)</span> <span class="math display">\[
+  \boldsymbol{a}=\left(\begin{array}{l}
+  a_x \\
+  a_y \\
+  a_z
+  \end{array}\right)=\left(\begin{array}{l}
+  a_1 \\
+  a_2 \\
+  a_3
+  \end{array}\right), \quad \mathbf{b}=\left(\begin{array}{l}
+  b_x \\
+  b_y \\
+  b_z
+  \end{array}\right)=\left(\begin{array}{l}
+  b_1 \\
+  b_2 \\
+  b_3
+  \end{array}\right)
+  \]</span></p></li>
+<li><p>tensor <span class="math inline">\(\mathbf{T}\)</span> <span
+class="math display">\[
+  \mathbf{T} =
+  \left( \begin{array}{cccc}
+      T_{11} &amp;  &amp; T_{12} &amp;  &amp; T_{13} \\
+      T_{21} &amp;  &amp; T_{22} &amp;  &amp; T_{23} \\
+      T_{31} &amp;  &amp; T_{32} &amp;  &amp; T_{33}
+  \end{array} \right)
+  \]</span></p></li>
+<li><p>Inner product or Dot product</p>
+<p>In general, for engineering, inner and dot product can be treated the
+same operation</p>
+<ul>
+<li><p>The inner product of two vectors <span
+class="math inline">\(\mathbf{a}\)</span> and <span
+class="math inline">\(\mathbf{b}\)</span> produces a scalar <span
+class="math inline">\(\phi\)</span> and is commutative. This operation
+is indicated by the dot sign <span
+class="math inline">\(\bullet\)</span></p>
+<p><span class="math display">\[
+\phi = \mathbf{a} \cdotp \mathbf{b} = \mathbf{a}^{T}  \mathbf{b} =
+\sum_{i=1}^3 a_i b_i
+\]</span></p></li>
+<li><p>The inner product of vector <span
+class="math inline">\(\boldsymbol{a}\)</span> and a tensor <span
+class="math inline">\(\boldsymbol{T}\)</span> produces a vector <span
+class="math inline">\(\boldsymbol{b}\)</span>, is non-commutative if the
+tensor is non-symmetric:</p>
+<p><span class="math display">\[
+\mathbf{b} = \mathbf{T} \cdot \mathbf{a} = \sum_{i=1}^3 \sum_{j=1}^3
+T_{ij}a_j = \left( \begin{array}{cccc}
+    T_{11} a_1 &amp; + &amp; T_{12} a_2 &amp; + &amp; T_{13} a_3 \\
+    T_{21} a_1 &amp; + &amp; T_{22} a_2 &amp; + &amp; T_{23} a_3 \\
+    T_{31} a_1 &amp; + &amp; T_{32} a_2 &amp; + &amp; T_{33} a_3
+\end{array} \right)
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{b} = \mathbf{a} \cdot \mathbf{T} = \sum_{i=1}^3 \sum_{j=1}^3
+a_jT_{ji}
+\]</span></p>
+<p>if <span class="math inline">\(\mathbf{T}\)</span> is a symmetric
+tensor, that is <span class="math inline">\(\mathbf{T}_{ij} =
+\mathbf{T}_{ji}\)</span>, then <span class="math inline">\(\mathbf{a}
+\cdot \mathbf{T} = \mathbf{T} \cdot \mathbf{a}\)</span></p></li>
+</ul></li>
+<li><p>Outer product</p>
+<ul>
+<li><p>The outer product (dyadic product) of two vectors <span
+class="math inline">\(\mathbf{a}, \mathbf{b}\)</span> is a tensor</p>
+<p><span class="math display">\[
+\mathbf{T}=\mathbf{a} \otimes \mathbf{b}=\mathbf{a
+b}^T=\left[\begin{array}{lll}
+a_x b_x &amp; a_x b_y &amp; a_x b_z \\
+a_y b_x &amp; a_y b_y &amp; a_y b_z \\
+a_z b_x &amp; a_z b_y &amp; a_z b_z
+\end{array}\right]
+\]</span></p>
+<p>Usually, sign <span class="math inline">\(\otimes\)</span> is
+neglected for brevity as shown below:</p>
+<p><span class="math display">\[
+\mathbf{a}\mathbf{b}
+\]</span></p>
+<p>But the first one is mathematically correct.</p></li>
+</ul></li>
+<li><p>Cross product</p>
+<ul>
+<li>the cross product of <span class="math inline">\(\mathbf{a} \times
+\mathbf{b}\)</span> is vector that perpendicular to both <span
+class="math inline">\(\mathbf{a}\)</span> and <span
+class="math inline">\(\mathbf{b}\)</span>, which defines a plane.</li>
+<li>the magnitude of the cross product of two vectors represents the
+area of the parallelogram spanned by the two vectors</li>
+</ul>
+<p><span class="math display">\[
+\mathbf{a} \times \mathbf{b} = \left| \begin{array}{lll}
+                              \mathbf{i} &amp; \mathbf{j} &amp;
+\mathbf{k} \\
+                              a_1 &amp; a_2 &amp; a_3\\
+                              b_1 &amp; b_2 &amp; b_3
+                              \end{array} \right|
+                             = \left[ \begin{array}{l}
+                             a_2 b_3 - b_2 a_3 \\
+                             a_1 b_3 - b_1 a_3 \\
+                             a_1 b_2 - b_1 a_2
+                             \end{array}\right]
+\]</span></p></li>
+<li><p>Differential Operators</p>
+<p>The spatial derivative of a variable (scalar, vector or tensor) is
+made by using the "Nabla" operator <span
+class="math inline">\(\nabla\)</span> or "del". It contains the three
+space derivatives of <span class="math inline">\(x,y,z\)</span> in a
+Cartesian coordinate system: <span class="math display">\[
+  \nabla = \left(\begin{array}{l}
+  \frac{\partial}{\partial x} \\
+  \frac{\partial}{\partial y} \\
+  \frac{\partial}{\partial z}
+  \end{array}\right)
+  \]</span></p>
+<ul>
+<li><p>Gradient Operator</p>
+<ul>
+<li><p>the gradient of a scalar <span
+class="math inline">\(\phi\)</span> results in a vector <span
+class="math inline">\(\mathbf{a}\)</span>: <span class="math display">\[
+  \text{grad} \phi = \nabla\phi = \left(\begin{array}{l}
+                                  \frac{\partial \phi}{\partial x} \\
+                                  \frac{\partial \phi}{\partial y} \\
+                                  \frac{\partial \phi}{\partial z}
+                                  \end{array}\right)
+  \]</span></p></li>
+<li><p>the gradient of a vector <span
+class="math inline">\(\mathbf{b}\)</span> results in a tensor <span
+class="math inline">\(\mathbf{T}\)</span> <span class="math display">\[
+  \text{grad} \mathbf{b} = \nabla \otimes \mathbf{b} = \nabla \mathbf{b}
+= \left[\begin{array}{lll}
+  \frac{\partial}{\partial x} b_x &amp; \frac{\partial}{\partial x} b_y
+&amp; \frac{\partial}{\partial x} b_z \\
+  \frac{\partial}{\partial y} b_x &amp; \frac{\partial}{\partial y} b_y
+&amp; \frac{\partial}{\partial y} b_z \\
+  \frac{\partial}{\partial z} b_x &amp; \frac{\partial}{\partial z} b_y
+&amp; \frac{\partial}{\partial z} b_z
+  \end{array}\right]
+  \]</span> <u>So the gradient operation increases the rank of the
+tensor by one</u>.</p></li>
+</ul></li>
+<li><p>Divergence Operator</p>
+<ul>
+<li>The divergence of a vector <span
+class="math inline">\(\mathbf{b}\)</span> results in a scalar <span
+class="math inline">\(\phi\)</span>, and can be expressed by the Nabla
+and the dot sign <span class="math inline">\(\bullet\)</span>, <span
+class="math inline">\(\nabla \bullet\)</span>: <span
+class="math display">\[
+  \text{div} \mathbf{b} = \nabla \bullet \mathbf{b} = \sum_{i=1}^3
+\frac{\partial}{\partial x_i} \mathbf{b_i} = \frac{\partial
+b_1}{\partial x_1} + \frac{\partial b_2}{\partial x_2} + \frac{\partial
+b_3}{\partial x_3}
+  \]</span>
+<ul>
+<li>Physically the divergence of vector field over a region is a measure
+of how much the vector field points into or out of the region.</li>
+</ul></li>
+<li>The divergence of a tensor <span
+class="math inline">\(\mathbf{T}\)</span> results in a vector <span
+class="math inline">\(\mathbf{b}\)</span>: <span class="math display">\[
+  \text{div} \mathbf{T} = \nabla \bullet \mathbf{T} =
+\frac{\partial}{\partial x_j} \mathbf{T_{ji}} =
+\left[\begin{array}{llll}
+  \frac{\partial T_{11}}{\partial x_1} + \frac{\partial T_{21}}{\partial
+x_2} + \frac{\partial T_{31}}{\partial x_3} \\
+  \frac{\partial T_{12}}{\partial x_1} + \frac{\partial T_{22}}{\partial
+x_2} + \frac{\partial T_{32}}{\partial x_3} \\
+  \frac{\partial T_{13}}{\partial x_1} + \frac{\partial T_{23}}{\partial
+x_2} + \frac{\partial T_{33}}{\partial x_3}
+  \end{array}\right]
+  \]</span></li>
+</ul>
+<p><u>So the divergence operation decreases the rank of the tensor by
+one.</u></p>
+<ul>
+<li>The product Rule within the divergence operator
+<ul>
+<li>The divergence of the product of vector <span
+class="math inline">\(\mathbf{a}\)</span> and a scalar <span
+class="math inline">\(\phi\)</span> <span class="math display">\[
+\nabla \bullet (\mathbf{a} \phi) = \mathbf{a} \bullet \nabla \phi + \phi
+\nabla \bullet \mathbf{a}
+\]</span></li>
+<li>The divergence of the outer product of two vectors <span
+class="math inline">\(\mathbf{a}\)</span> and <span
+class="math inline">\(\mathbf{b}\)</span> <span class="math display">\[
+\nabla \bullet (\mathbf{a} \otimes \mathbf{b}) = \nabla \bullet
+(\mathbf{a} \mathbf{b}) = \mathbf{a} \bullet \nabla \mathbf{b} +
+\mathbf{b} \nabla \bullet \mathbf{a}
+\]</span></li>
+</ul></li>
+</ul></li>
+<li><p>Other operations on the Nabla Operator</p>
+<ul>
+<li>the divergence of the gradient of a scalar variable <span
+class="math inline">\(\boldsymbol{s}\)</span> is denoted by the
+Laplacian of <span class="math inline">\(\boldsymbol{s}\)</span> and is
+a scalar</li>
+</ul>
+<p><span class="math display">\[
+\nabla \cdot (\nabla\boldsymbol{s}) = \nabla ^2 \boldsymbol{s} =
+\frac{\partial ^2 \boldsymbol{s}}{\partial x^2} + \frac{\partial ^2
+\boldsymbol{s}}{\partial y^2} + \frac{\partial ^2
+\boldsymbol{s}}{\partial z^2}
+\]</span></p></li>
+</ul></li>
+</ul>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/02/CFD-and-I/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Tian">
+      <meta itemprop="description" content="stay awesome">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CFDfield">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/02/CFD-and-I/" class="post-title-link" itemprop="url">CFD and I</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-08-02 00:26:59" itemprop="dateCreated datePublished" datetime="2023-08-02T00:26:59+01:00">2023-08-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-08-13 21:18:10" itemprop="dateModified" datetime="2023-08-13T21:18:10+01:00">2023-08-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>I began studying fluid mechanics during my undergraduate years, and
+it wasn't until my master's degree that I truly delved into
+Computational Fluid Dynamics (CFD). Subsequently, I pursued a doctorate
+in the field of CFD, which continues to this day. Throughout this
+period, I explored topics such as thermal fluids, multiphase flow, and
+fluid-structure interactions. I utilized various numerical computation
+tools like Ansys and OpenFOAM, and even ventured into optimizing and
+implementing models on open-source platforms. Gradually, my attitude
+towards the discipline shifted from merely preparing for exams to
+finding genuine enjoyment in it. I often can't help but marvel at the
+brilliance of my predecessors in academia, who adeptly employed
+sophisticated mathematical language like the Navier-Stokes equations and
+turbulence models to eloquently explain natural fluid phenomena such as
+clouds, gentle breezes, and ocean waves.</p>
+<p>Upon interacting with some experts in the field, I have gained a
+substantial amount of knowledge. This experience has ignited a fervor
+within me to continue exploring the unknown, much like the saying
+"beyond the mountains are more mountains." These encounters have filled
+me with an enthusiasm to forge ahead, and I aspire to use this avenue to
+document and share my insights and musings.</p>
+<p>My journey in the realm of CFD is ongoing and will persist into the
+future...</p>
 
       
     </div>
@@ -296,9 +682,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -433,6 +825,61 @@ $(document).ready(function() {
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
