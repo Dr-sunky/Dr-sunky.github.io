@@ -1,2 +1,4 @@
-https://dr-sunky.github.io/2024/05/14/20240514/
+https://dr-sunky.github.io/2024/05/14/3-OpenFOAM-Workshop/
+https://dr-sunky.github.io/2024/05/14/1-CFD-mathematics/
+https://dr-sunky.github.io/2024/05/14/2-Foundamental-Theorems-of-Vector-Caculus/
 https://dr-sunky.github.io/
