@@ -6,7 +6,7 @@
   <link href="https://dr-sunky.github.io/atom.xml" rel="self"/>
   
   <link href="https://dr-sunky.github.io/"/>
-  <updated>2024-05-14T22:41:27.730Z</updated>
+  <updated>2024-05-15T20:36:38.089Z</updated>
   <id>https://dr-sunky.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://dr-sunky.github.io/2024/05/14/3-OpenFOAM-Workshop/"/>
     <id>https://dr-sunky.github.io/2024/05/14/3-OpenFOAM-Workshop/</id>
     <published>2024-05-14T22:35:56.000Z</published>
-    <updated>2024-05-14T22:41:27.730Z</updated>
+    <updated>2024-05-15T20:36:38.089Z</updated>
     
-    <content type="html"><![CDATA[<img src="/2024/05/14/3-OpenFOAM-Workshop/velocity.gif" class title="perpendicular flap (velocity field)"><img src="/2024/05/14/3-OpenFOAM-Workshop/overset_mesh_zoom.gif" class title="zoomed view mesh around the tip of flap"><img src="/2024/05/14/3-OpenFOAM-Workshop/vorticity_linear.gif" class title="VIV of rigid cyliner (Linear, vorticity)"><img src="/2024/05/14/3-OpenFOAM-Workshop/vorticity_non.gif" class title="VIV of rigid cyliner (NonLinear, vorticity)">]]></content>
+    <content type="html"><![CDATA[<img src="/2024/05/14/3-OpenFOAM-Workshop/velocity.gif" class title="perpendicular flap (velocity field)"><img src="/2024/05/14/3-OpenFOAM-Workshop/overset_mesh_zoom.gif" class title="zoomed view mesh around the tip of flap modified"><img src="/2024/05/14/3-OpenFOAM-Workshop/vorticity_linear.gif" class title="VIV of rigid cyliner (Linear, vorticity)"><img src="/2024/05/14/3-OpenFOAM-Workshop/vorticity_non.gif" class title="VIV of rigid cyliner (NonLinear, vorticity)">]]></content>
     
     
       
