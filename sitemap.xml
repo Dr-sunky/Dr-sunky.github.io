@@ -2,27 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/3-OpenFOAM-Workshop/</loc>
+    <loc>https://dr-sunky.github.io/2026/04/04/profile/</loc>
     
-    <lastmod>2024-05-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/1-CFD-mathematics/</loc>
-    
-    <lastmod>2024-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/2-Foundamental-Theorems-of-Vector-Caculus/</loc>
-    
-    <lastmod>2024-05-14</lastmod>
+    <lastmod>2026-04-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +13,7 @@
 
   <url>
     <loc>https://dr-sunky.github.io/</loc>
-    <lastmod>2024-05-15</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
