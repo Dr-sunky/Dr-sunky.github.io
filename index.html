@@ -17,14 +17,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  <title>Young CFD - Tim's CFD field</title>
+  <title>FlowX</title>
 
-  <meta name="description" content="Young CFD is Tim&#39;s research notebook for CFD, OpenFOAM, fluid-structure interaction, scientific visualisation and machine learning.">
+  <meta name="description" content="FlowX is Tim&#39;s research notebook for CFD, OpenFOAM, scientific visualisation and intelligent flow modelling.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Young CFD">
+<meta property="og:title" content="FlowX">
 <meta property="og:url" content="https://youngcfd.com/">
-<meta property="og:site_name" content="Tim's CFD field">
-<meta property="og:description" content="Young CFD is Tim&#39;s research notebook for CFD, OpenFOAM, fluid-structure interaction, scientific visualisation and machine learning.">
+<meta property="og:site_name" content="FlowX">
+<meta property="og:description" content="FlowX is Tim&#39;s research notebook for CFD, OpenFOAM, scientific visualisation and intelligent flow modelling.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/83872296?v=4">
 <meta property="article:published_time" content="2026-04-04T22:04:18.000Z">
@@ -32,7 +32,7 @@
 <meta property="article:author" content="Tim">
 <meta property="article:tag" content="OpenFOAM, Fluid-Structure Interaction, Wave-Structure Interaction, Machine Learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/83872296?v=4"><meta name="twitter:title" content="Young CFD">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/83872296?v=4">
   
   
   <meta name="keywords" content="OpenFOAM, Fluid-Structure Interaction, Wave-Structure Interaction, Machine Learning">
@@ -43,7 +43,7 @@
 
     
       
-        <link rel="alternate" href="/atom.xml" title="Tim's CFD field" type="application/atom+xml">
+        <link rel="alternate" href="/atom.xml" title="FlowX" type="application/atom+xml">
       
     
   
@@ -53,11 +53,25 @@
 
 
   
+    <link rel="shortcut icon" href="/images/flowx-mark.svg">
+  
 
   
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://youngcfd.com/","author":{"@type":"Person","name":"Tim","sameAs":["https://github.com/Dr-sunky"],"image":"https://avatars.githubusercontent.com/u/83872296?v=4"},"name":"Young CFD","description":"Young CFD is Tim's research notebook for CFD, OpenFOAM, fluid-structure interaction, scientific visualisation and machine learning.","url":"https://youngcfd.com/","keywords":"OpenFOAM, Fluid-Structure Interaction, Wave-Structure Interaction, Machine Learning"}</script>
-  <link rel="stylesheet" href="/css/content-protection.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Website","@id":"https://youngcfd.com/","author":{"@type":"Person","name":"Tim","sameAs":["https://github.com/Dr-sunky"],"image":"https://avatars.githubusercontent.com/u/83872296?v=4"},"name":"FlowX","description":"FlowX is Tim's research notebook for CFD, OpenFOAM, scientific visualisation and intelligent flow modelling.","url":"https://youngcfd.com/","keywords":"OpenFOAM, Fluid-Structure Interaction, Wave-Structure Interaction, Machine Learning"}</script>
+  <link rel="stylesheet" href="/css/content-protection.css"><link rel="stylesheet" href="/css/flowx-glass.css"><link rel="stylesheet" href="/css/flowx-intro.css"><script>
+  (() => {
+    try {
+      const home = location.pathname === '/' || location.pathname === '/index.html';
+      const replay = new URLSearchParams(location.search).get('intro') === '1';
+      const seen = sessionStorage.getItem('flowx-intro-seen') === '1';
+      if (home && (replay || !seen)) {
+        document.documentElement.classList.add('flowx-intro-pending');
+      }
+    } catch (_) {}
+  })();
+</script>
+
 
   <!-- icons.yml 驱动的 CSS 装饰图标 -->
   
@@ -75,7 +89,7 @@
 
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/83872296?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">Tim's CFD field</div><div class="sub normal cap">CFD</div><div class="sub hover cap" style="opacity:0"> OpenFOAM | Machine Learning</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/83872296?v=4" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">FlowX</div><div class="sub normal cap">Intelligent Flow</div><div class="sub hover cap" style="opacity:0"> CFD × AI</div></a></div></header>
 
 
 <div class="search-wrapper" id="search-wrapper"><div class="search-form" role="search"><label class="search-button" for="search-input" aria-hidden="true"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></label><input type="search" class="search-input" id="search-input" aria-label="Search" placeholder="Search"></div><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
@@ -88,7 +102,7 @@
 <div class="ui-collection" data-layout="list" data-variant="nav" data-density="auto">
   
     
-<a class="ui-collection__item card-hover card-hover--spotlight is-active is-themed" href="/" title="Home" aria-current="page" style="--item-theme:#22D3EE;--item-grad:url(#menu-grad-home);">
+<a class="ui-collection__item card-hover card-hover--spotlight is-active is-themed" href="/" title="Home" aria-current="page" style="--item-theme:#E7C66B;--item-grad:url(#menu-grad-home);">
   
   <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></span>
   
@@ -108,7 +122,7 @@
 
   
     
-<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/blog/" title="Blog" style="--item-theme:#38BDF8;--item-grad:url(#menu-grad-post);">
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/blog/" title="Blog" style="--item-theme:#71D7FF;--item-grad:url(#menu-grad-post);">
   
   <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></span>
   
@@ -128,7 +142,7 @@
 
   
     
-<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/about/" title="About" style="--item-theme:#2DD4BF;--item-grad:url(#menu-grad-about);">
+<a class="ui-collection__item card-hover card-hover--spotlight is-themed" href="/about/" title="About" style="--item-theme:#B52A38;--item-grad:url(#menu-grad-about);">
   
   <span class="ui-collection__leading"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2s1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 5.638-4.239 8.375-6.899 9.536C13.38 21.842 13.02 22 12 22s-1.38-.158-2.101-.473C7.239 20.365 3 17.63 3 11.991z" opacity=".5"/><path fill="currentColor" d="M14 9a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-2 8c4 0 4-.895 4-2s-1.79-2-4-2s-4 .895-4 2s0 2 4 2"/></svg></span>
   
@@ -237,28 +251,26 @@
     <div class="top bread-nav footnote"><div class="top-row"><div class="left" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
 
   <span class="sep"></span>
-  <a class="cap breadcrumb" href="/">Young CFD</a>
+  <a class="cap breadcrumb" href="/"></a>
   </div></div><div class="meta-row">
 <div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2026-04-04T22:04:18.000Z">2026-04-04</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2026-04-04T22:04:18.000Z">2026-04-04</time></span></div>
 </div></div>
     
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>Young CFD</span></h1>
-        
-      </div>
-    </div>
-    
   </div>
   </div></div>
-<article class="md-text content slide-up"><h1 id="Young-CFD"><a href="#Young-CFD" class="headerlink" title="Young CFD"></a>Young CFD</h1><p>Research notes and reproducible experiments at the intersection of computational fluid dynamics and data-driven modelling.</p>
+<article class="md-text content slide-up"><h1 id="FlowX"><a href="#FlowX" class="headerlink" title="FlowX"></a>FlowX</h1><p><strong>Intelligent Flow</strong> — research notes and reproducible experiments at the intersection of computational fluid dynamics and data-driven modelling.</p>
 <h2 id="Current-focus"><a href="#Current-focus" class="headerlink" title="Current focus"></a>Current focus</h2><ul>
 <li><strong>Simulation</strong> — OpenFOAM, overset meshes, fluid–structure interaction and wave–structure interaction.</li>
 <li><strong>Scientific visualisation</strong> — flow fields, vorticity, moving meshes and simulation video.</li>
 <li><strong>Machine learning</strong> — reduced-order models, surrogate modelling and ML-enhanced CFD workflows.</li>
 </ul>
-<h2 id="Start-exploring"><a href="#Start-exploring" class="headerlink" title="Start exploring"></a>Start exploring</h2><ul>
+<h2 id="Start-exploring"><a href="#Start-exploring" class="headerlink" title="Start exploring"></a>Start exploring</h2><div class="flowx-focus-grid">
+  <a class="flowx-focus-card flowx-focus-card--cfd" href="/categories/CFD-Fundamentals/"><span class="flowx-focus-card__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 25c8-15 14 15 22 0s14 0 16-8M5 34c8-15 14 15 22 0s14 0 16-8M5 16c8-10 14 10 22 0s14 0 16-5"/></svg></span><strong>CFD</strong><small>Simulation &amp; fluid mechanics</small></a>
+  <a class="flowx-focus-card flowx-focus-card--ml" href="/categories/machine-learning/"><span class="flowx-focus-card__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="mlp-links"><path d="M9 12 24 9M9 12 24 21M9 12 24 33M9 12 24 45M9 24 24 9M9 24 24 21M9 24 24 33M9 24 24 45M9 36 24 9M9 36 24 21M9 36 24 33M9 36 24 45M24 9 39 12M24 9 39 24M24 9 39 36M24 21 39 12M24 21 39 24M24 21 39 36M24 33 39 12M24 33 39 24M24 33 39 36M24 45 39 12M24 45 39 24M24 45 39 36"/></g><g class="mlp-nodes"><circle cx="9" cy="12" r="3"/><circle cx="9" cy="24" r="3"/><circle cx="9" cy="36" r="3"/><circle cx="24" cy="9" r="3"/><circle cx="24" cy="21" r="3"/><circle cx="24" cy="33" r="3"/><circle cx="24" cy="45" r="3"/><circle cx="39" cy="12" r="3"/><circle cx="39" cy="24" r="3"/><circle cx="39" cy="36" r="3"/></g></svg></span><strong>Machine Learning</strong><small>Models for intelligent flow</small></a>
+  <a class="flowx-focus-card flowx-focus-card--viz" href="/2024/05/14/3-OpenFOAM-Workshop/"><span class="flowx-focus-card__icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 22c1-6 6-10 13-10h8c7 0 12 4 13 10l-1 8c-.5 3-3 5-6 5h-3c-2 0-3-1-4-3l-1-2h-4l-1 2c-1 2-3 3-4 3h-3c-3 0-5.5-2-6-5z"/><path d="M12 24h10M26 24h10M17 19v10M31 19v10"/><path d="m40 9 1.5 3L45 13.5 41.5 15 40 18l-1.5-3-3.5-1.5L38.5 12z"/></svg></span><strong>Visualization</strong><small>Fields, meshes &amp; motion</small></a>
+</div>
+
+<ul>
 <li>Read the latest notes in the <a href="/blog/">blog</a>.</li>
 <li>Browse by <a href="/categories/">category</a> or <a href="/tags/">tag</a>.</li>
 <li>See selected <a href="/2024/05/14/3-OpenFOAM-Workshop/">OpenFOAM visualisations</a>.</li>
@@ -282,7 +294,7 @@ Content is licensed under <a target="_blank" rel="noopener" href="https://creati
       <a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a>
     </div>
   
-  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link" href="#Young-CFD"><span class="toc-text">Young CFD</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Current-focus"><span class="toc-text">Current focus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Start-exploring"><span class="toc-text">Start exploring</span></a></li></ol></li></ol></div>
+  <div class="widget-body"><ol class="toc ui-collection-adapter"><li class="toc-item toc-level-1"><a class="toc-link" href="#FlowX"><span class="toc-text">FlowX</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Current-focus"><span class="toc-text">Current focus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Start-exploring"><span class="toc-text">Start exploring</span></a></li></ol></li></ol></div>
   <div class="widget-footer"><a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --><path fill="currentColor" fill-rule="evenodd" d="M11.9426 1.25H12.0574C14.3658 1.24999 16.1748 1.24998 17.5863 1.43975C19.031 1.63399 20.1711 2.03933 21.0659 2.93414C21.9607 3.82895 22.366 4.96897 22.5603 6.41371C22.75 7.82519 22.75 9.63423 22.75 11.9426V12.0574C22.75 14.3658 22.75 16.1748 22.5603 17.5863C22.366 19.031 21.9607 20.1711 21.0659 21.0659C20.1711 21.9607 19.031 22.366 17.5863 22.5603C16.1748 22.75 14.3658 22.75 12.0574 22.75H11.9426C9.63423 22.75 7.82519 22.75 6.41371 22.5603C4.96897 22.366 3.82895 21.9607 2.93414 21.0659C2.03933 20.1711 1.63399 19.031 1.43975 17.5863C1.24998 16.1748 1.24999 14.3658 1.25 12.0574V11.9426C1.24999 9.63423 1.24998 7.82519 1.43975 6.41371C1.63399 4.96897 2.03933 3.82895 2.93414 2.93414C3.82895 2.03933 4.96897 1.63399 6.41371 1.43975C7.82519 1.24998 9.63423 1.24999 11.9426 1.25ZM6.61358 2.92637C5.33517 3.09825 4.56445 3.42514 3.9948 3.9948C3.42514 4.56445 3.09825 5.33517 2.92637 6.61358C2.75159 7.91356 2.75 9.62177 2.75 12C2.75 14.3782 2.75159 16.0864 2.92637 17.3864C3.09825 18.6648 3.42514 19.4355 3.9948 20.0052C4.56445 20.5749 5.33517 20.9018 6.61358 21.0736C7.91356 21.2484 9.62177 21.25 12 21.25C14.3782 21.25 16.0864 21.2484 17.3864 21.0736C18.6648 20.9018 19.4355 20.5749 20.0052 20.0052C20.5749 19.4355 20.9018 18.6648 21.0736 17.3864C21.2484 16.0864 21.25 14.3782 21.25 12C21.25 9.62177 21.2484 7.91356 21.0736 6.61358C20.9018 5.33517 20.5749 4.56445 20.0052 3.9948C19.4355 3.42514 18.6648 3.09825 17.3864 2.92637C16.0864 2.75159 14.3782 2.75 12 2.75C9.62177 2.75 7.91356 2.75159 6.61358 2.92637ZM12 9.56066L9.53033 12.0303C9.23744 12.3232 8.76256 12.3232 8.46967 12.0303C8.17678 11.7374 8.17678 11.2626 8.46967 10.9697L11.4697 7.96967C11.7626 7.67678 12.2374 7.67678 12.5303 7.96967L15.5303 10.9697C15.8232 11.2626 15.8232 11.7374 15.5303 12.0303C15.2374 12.3232 14.7626 12.3232 14.4697 12.0303L12 9.56066ZM12 13.5607L9.53033 16.0303C9.23744 16.3232 8.76256 16.3232 8.46967 16.0303C8.17678 15.7374 8.17678 15.2626 8.46967 14.9697L11.4697 11.9697C11.7626 11.6768 12.2374 11.6768 12.5303 11.9697L15.5303 14.9697C15.8232 15.2626 15.8232 15.7374 15.5303 16.0303C15.2374 16.3232 14.7626 16.3232 14.4697 16.0303L12 13.5607Z" clip-rule="evenodd"/></svg><span>Scroll to Top</span></a></div>
 </widget>
 
@@ -900,7 +912,7 @@ Content is licensed under <a target="_blank" rel="noopener" href="https://creati
 <script>
   stellar.initPlugin(() => {
     let disposed = false;
-    ctx.card_hover = {"spotlightColor":"rgba(34, 211, 238, 0.18)","maxTilt":2};
+    ctx.card_hover = {"spotlightColor":"rgba(231, 198, 107, 0.22)","maxTilt":2};
     utils.js('/js/plugins/card-hover.js', { defer: true }).then(() => {
       if (!disposed && stellar.cardHover && typeof stellar.cardHover.mountAll === 'function') {
         stellar.cardHover.mountAll(document);
@@ -918,5 +930,5 @@ Content is licensed under <a target="_blank" rel="noopener" href="https://creati
 
 
 <!-- inject -->
-<script defer src="/js/content-protection.js"></script>
+<script defer src="/js/flowx-intro.js"></script><script defer src="/js/content-protection.js"></script>
 </div></body></html>

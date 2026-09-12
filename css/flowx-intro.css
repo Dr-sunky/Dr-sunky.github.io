@@ -1,0 +1,379 @@
+:root {
+  --flowx-gold: #e7c66b;
+  --flowx-gold-soft: #f5de91;
+  --flowx-arc: #71d7ff;
+  --flowx-red: #b52a38;
+  --flowx-metal: #101318;
+}
+
+html.flowx-intro-pending,
+html.flowx-intro-pending body {
+  overflow: hidden;
+}
+
+html.flowx-intro-pending body > :not(#flowx-intro):not(script) {
+  visibility: hidden !important;
+}
+
+html.flowx-intro-pending body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483645;
+  content: "";
+  background:
+    radial-gradient(circle at 50% 48%, rgb(113 215 255 / 12%), transparent 18rem),
+    linear-gradient(145deg, #080a0e, #171b22 52%, #0a0c11);
+}
+
+.flowx-intro {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #f8f4e8;
+  background:
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgb(113 215 255 / 12%), transparent 20rem),
+    radial-gradient(circle at 16% 80%, rgb(181 42 56 / 11%), transparent 26rem),
+    linear-gradient(145deg, #080a0e, #171b22 52%, #0a0c11);
+  opacity: 1;
+  transition: opacity 420ms ease, visibility 420ms ease;
+}
+
+.flowx-intro::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    linear-gradient(rgb(231 198 107 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(231 198 107 / 4%) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+}
+
+.flowx-intro.is-leaving {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.flowx-intro.is-activating .flowx-reactor {
+  animation: flowx-reactor-start 0.95s ease-in forwards;
+}
+
+.flowx-intro.is-activating .flowx-reactor__svg {
+  filter: drop-shadow(0 0 3.5rem rgb(113 215 255 / 46%));
+}
+
+.flowx-intro.is-activating .flowx-reactor__canvas {
+  filter: drop-shadow(0 0 3.5rem rgb(113 215 255 / 46%));
+}
+
+.flowx-intro.is-activating .flowx-intro__enter {
+  border-color: var(--flowx-gold-soft);
+  color: #ffffff;
+  box-shadow: 0 0 2.5rem rgb(231 198 107 / 38%);
+}
+
+.flowx-intro__panel {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(88vw, 34rem);
+  text-align: center;
+}
+
+.flowx-reactor {
+  --reactor-tilt-x: 0deg;
+  --reactor-tilt-y: 0deg;
+  position: relative;
+  display: grid;
+  width: clamp(15rem, 40vw, 21rem);
+  aspect-ratio: 1;
+  place-items: center;
+  isolation: isolate;
+  perspective: 900px;
+}
+
+.flowx-reactor::after {
+  position: absolute;
+  inset: 15% 10% 3%;
+  z-index: -1;
+  content: "";
+  border-radius: 50%;
+  background: rgb(0 0 0 / 75%);
+  filter: blur(1.4rem);
+  transform: translateY(12%);
+}
+
+.flowx-reactor__svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 2.2rem rgb(113 215 255 / 14%));
+  transform: rotateX(var(--reactor-tilt-x)) rotateY(var(--reactor-tilt-y));
+  transform-style: preserve-3d;
+  transition: transform 140ms ease-out;
+}
+
+.flowx-reactor__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2.2rem rgb(113 215 255 / 18%));
+  transform: rotateX(var(--reactor-tilt-x)) rotateY(var(--reactor-tilt-y));
+  transform-style: preserve-3d;
+  transition: opacity 260ms ease, transform 140ms ease-out;
+}
+
+.flowx-intro-has-3d .flowx-reactor__svg { opacity: 0; }
+.flowx-intro-has-3d .flowx-reactor__canvas { opacity: 1; }
+
+.flowx-reactor__energy-overlay {
+  position: absolute;
+  inset: 25%;
+  z-index: 2;
+  border: 0.28rem solid transparent;
+  border-top-color: rgb(169 237 255 / 92%);
+  border-right-color: rgb(113 215 255 / 70%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 0 0.65rem rgb(113 215 255 / 86%));
+  transform: rotate(12deg);
+  will-change: transform;
+}
+
+.flowx-intro-has-3d .flowx-reactor__energy-overlay { opacity: .78; }
+.flowx-intro-has-3d.reactor-hover .flowx-reactor__energy-overlay { animation: flowx-arc-rotate 7s linear infinite; }
+.flowx-intro-has-3d.is-activating .flowx-reactor__energy-overlay { opacity: 1; animation: flowx-arc-rotate .72s linear infinite; }
+
+.reactor-cable {
+  fill: none;
+  stroke-linecap: round;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 82%));
+}
+
+.reactor-cable--red {
+  stroke: #6f1d25;
+  stroke-width: 5;
+}
+
+.reactor-cable--dark {
+  stroke: #1b2024;
+  stroke-width: 6;
+}
+
+.reactor-rim-highlight {
+  fill: none;
+  stroke: rgb(246 238 213 / 46%);
+  stroke-linecap: round;
+  stroke-width: 2;
+  filter: blur(0.2px);
+}
+
+.reactor-calibration {
+  transform-origin: 160px 160px;
+  animation: flowx-spin 36s linear infinite;
+}
+
+.reactor-hover .reactor-calibration {
+  animation-duration: 18s;
+}
+
+.reactor-hover .reactor-energy-ring {
+  animation: flowx-arc-rotate 7s linear infinite;
+}
+
+.flowx-intro.is-activating .reactor-calibration {
+  animation-duration: 1.15s;
+}
+
+.flowx-intro.is-activating .reactor-energy-ring {
+  animation: flowx-arc-rotate 0.72s linear infinite;
+}
+
+.flowx-intro.is-activating .reactor-core-light {
+  animation: flowx-core-ignite 0.95s ease-in forwards;
+}
+
+.reactor-coil-bed {
+  fill: #17191b;
+  stroke: #8c7854;
+  stroke-width: 1.5;
+  filter: drop-shadow(0 3px 2px rgb(0 0 0 / 72%));
+}
+
+.reactor-coil-wire {
+  fill: none;
+  stroke-width: 3.1;
+  stroke-linecap: round;
+}
+
+.reactor-coil-clamp {
+  fill: none;
+  stroke: #c8ccd0;
+  stroke-width: 2;
+  opacity: 0.78;
+}
+
+.reactor-brace {
+  stroke: #0b0d0f;
+  stroke-width: 1.6;
+  filter: drop-shadow(0 2px 1px rgb(0 0 0 / 80%));
+}
+
+.reactor-fastener {
+  fill: #171a1e;
+  stroke: #e0d09c;
+  stroke-width: 1;
+}
+
+.reactor-bolt {
+  stroke: #25292d;
+  stroke-width: 1.5;
+}
+
+.reactor-bolt-slot {
+  stroke: #353a3e;
+  stroke-width: 1;
+}
+
+.reactor-energy-ring {
+  transform-origin: 160px 160px;
+  animation: flowx-energy 4.2s ease-in-out infinite;
+}
+
+.reactor-core-light {
+  transform-origin: 160px 160px;
+  animation: flowx-core 5.6s ease-in-out infinite;
+}
+
+.reactor-vane {
+  stroke: #11171b;
+  stroke-width: 1.2;
+  opacity: 0.9;
+  filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 72%));
+}
+
+.reactor-glass-reflection {
+  fill: none;
+  stroke: rgb(255 255 255 / 52%);
+  stroke-linecap: round;
+  stroke-width: 3;
+  filter: blur(0.5px);
+}
+
+.flowx-intro__eyebrow {
+  margin: 1.5rem 0 0;
+  color: var(--flowx-arc);
+  font: 600 0.72rem/1.4 system-ui, sans-serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.flowx-intro__title {
+  margin: 0.45rem 0 0;
+  color: var(--flowx-gold-soft);
+  font: 700 clamp(2.6rem, 9vw, 5.2rem)/0.95 system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 2rem rgb(231 198 107 / 18%);
+}
+
+.flowx-intro__subtitle {
+  margin: 0.8rem 0 1.6rem;
+  color: rgb(232 237 242 / 70%);
+  font: 500 0.82rem/1.5 system-ui, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.flowx-intro__enter {
+  position: relative;
+  min-width: 10rem;
+  padding: 0.78rem 1.5rem;
+  border: 1px solid rgb(231 198 107 / 65%);
+  border-radius: 999px;
+  color: var(--flowx-gold-soft);
+  background: rgb(13 16 22 / 76%);
+  box-shadow: 0 0 1.4rem rgb(231 198 107 / 8%);
+  font: 650 0.76rem/1 system-ui, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.flowx-intro__enter:hover,
+.flowx-intro__enter:focus-visible {
+  border-color: var(--flowx-arc);
+  color: #e8faff;
+  box-shadow: 0 0 1.8rem rgb(113 215 255 / 24%);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.flowx-intro__hint {
+  margin: 0.85rem 0 0;
+  color: rgb(232 237 242 / 42%);
+  font: 500 0.65rem/1.4 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+@keyframes flowx-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes flowx-energy {
+  50% {
+    opacity: 0.83;
+    stroke-width: 7.8;
+  }
+}
+
+@keyframes flowx-arc-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes flowx-core {
+  0%, 100% { opacity: 0.92; }
+  48% { opacity: 1; }
+  51% { opacity: 0.86; }
+  54% { opacity: 1; }
+}
+
+@keyframes flowx-core-ignite {
+  0% { opacity: 0.92; transform: scale(1); }
+  38% { opacity: 1; transform: scale(1.08); filter: brightness(1.3); }
+  62% { opacity: 0.88; transform: scale(0.98); filter: brightness(1.05); }
+  100% { opacity: 1; transform: scale(1.16); filter: brightness(1.7); }
+}
+
+@keyframes flowx-reactor-start {
+  0% { transform: scale(1); }
+  52% { transform: scale(1.018); }
+  100% { transform: scale(1.045); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reactor-calibration,
+  .reactor-energy-ring,
+  .reactor-core-light,
+  .flowx-reactor,
+  .flowx-reactor__energy-overlay {
+    animation: none;
+  }
+
+  .flowx-intro,
+  .flowx-intro__enter,
+  .flowx-reactor__svg,
+  .flowx-reactor__canvas {
+    transition-duration: 1ms;
+  }
+}

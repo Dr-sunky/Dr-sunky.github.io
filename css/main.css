@@ -40,17 +40,17 @@
   }
 }
 :root {
-  --hue: 188deg;
-  --sat: 86%;
-  --light: 53%;
+  --hue: 44deg;
+  --sat: 70%;
+  --light: 66%;
   --alpha: 1;
   --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --accent: #a26ef7;
-  --link: hsla(198deg 93% 60% / 1);
-  --link-a20: hsla(198deg 93% 60% / 0.2);
+  --accent: #70deff;
+  --link: hsla(194deg 92% 68% / 1);
+  --link-a20: hsla(194deg 92% 68% / 0.2);
   --item-theme: var(--theme);
   --item-theme-light: color-mix(in srgb, var(--item-theme) 50%, #fff);
   --background: hsla(210deg 20% 98% / 1);
@@ -341,50 +341,50 @@
   --link-a20: hsla(291.24087591240874deg 95% 32% / 0.2);
 }
 .colorful[color='theme'] {
-  --hue: 188deg;
-  --sat: 86%;
-  --light: 53%;
+  --hue: 44deg;
+  --sat: 70%;
+  --light: 66%;
   --alpha: 1;
   --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --link: hsla(188deg 86% 53% / 1);
-  --link-a20: hsla(188deg 86% 53% / 0.2);
-  --theme-border: hsla(188deg 50% 80% / var(--alpha));
-  --theme-block: hsla(188deg 90% 92% / var(--alpha));
-  --theme-mark: hsla(188deg 95% 80% / var(--alpha));
-  --theme-codeblock: hsla(188deg 50% 95% / var(--alpha));
-  --text: hsla(188deg 55% 16% / 1);
-  --text-p1: hsla(188deg 90% 20% / 1);
-  --text-p2: hsla(188deg 90% 20% / 0.8);
-  --text-p3: hsla(188deg 90% 20% / 0.6);
-  --text-p4: hsla(188deg 90% 20% / 0.4);
-  --link: hsla(188deg 95% 32% / 1);
-  --link-a20: hsla(188deg 95% 32% / 0.2);
+  --link: hsla(44deg 70% 66% / 1);
+  --link-a20: hsla(44deg 70% 66% / 0.2);
+  --theme-border: hsla(44deg 50% 80% / var(--alpha));
+  --theme-block: hsla(44deg 90% 92% / var(--alpha));
+  --theme-mark: hsla(44deg 95% 80% / var(--alpha));
+  --theme-codeblock: hsla(44deg 50% 95% / var(--alpha));
+  --text: hsla(44deg 55% 16% / 1);
+  --text-p1: hsla(44deg 90% 20% / 1);
+  --text-p2: hsla(44deg 90% 20% / 0.8);
+  --text-p3: hsla(44deg 90% 20% / 0.6);
+  --text-p4: hsla(44deg 90% 20% / 0.4);
+  --link: hsla(44deg 95% 32% / 1);
+  --link-a20: hsla(44deg 95% 32% / 0.2);
 }
 .colorful[color='accent'] {
-  --hue: 263deg;
-  --sat: 90%;
-  --light: 70%;
+  --hue: 194deg;
+  --sat: 100%;
+  --light: 72%;
   --alpha: 1;
   --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --link: hsla(263deg 90% 70% / 1);
-  --link-a20: hsla(263deg 90% 70% / 0.2);
-  --theme-border: hsla(263deg 50% 80% / var(--alpha));
-  --theme-block: hsla(263deg 90% 92% / var(--alpha));
-  --theme-mark: hsla(263deg 95% 80% / var(--alpha));
-  --theme-codeblock: hsla(263deg 50% 95% / var(--alpha));
-  --text: hsla(263deg 55% 16% / 1);
-  --text-p1: hsla(263deg 90% 20% / 1);
-  --text-p2: hsla(263deg 90% 20% / 0.8);
-  --text-p3: hsla(263deg 90% 20% / 0.6);
-  --text-p4: hsla(263deg 90% 20% / 0.4);
-  --link: hsla(263deg 95% 32% / 1);
-  --link-a20: hsla(263deg 95% 32% / 0.2);
+  --link: hsla(194deg 100% 72% / 1);
+  --link-a20: hsla(194deg 100% 72% / 0.2);
+  --theme-border: hsla(194deg 50% 80% / var(--alpha));
+  --theme-block: hsla(194deg 90% 92% / var(--alpha));
+  --theme-mark: hsla(194deg 95% 80% / var(--alpha));
+  --theme-codeblock: hsla(194deg 50% 95% / var(--alpha));
+  --text: hsla(194deg 55% 16% / 1);
+  --text-p1: hsla(194deg 90% 20% / 1);
+  --text-p2: hsla(194deg 90% 20% / 0.8);
+  --text-p3: hsla(194deg 90% 20% / 0.6);
+  --text-p4: hsla(194deg 90% 20% / 0.4);
+  --link: hsla(194deg 95% 32% / 1);
+  --link-a20: hsla(194deg 95% 32% / 0.2);
 }
 .colorful[color='light'] {
   --theme: #fff;
@@ -544,27 +544,27 @@
   }
 }
 :root[data-theme="dark"] .tag-plugin.tag {
-  --hue: 188deg;
-  --sat: 86%;
-  --light: 53%;
+  --hue: 44deg;
+  --sat: 70%;
+  --light: 66%;
   --alpha: 1;
   --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
   --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
   --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
   --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-  --link: hsla(188deg 86% 53% / 1);
-  --link-a20: hsla(188deg 86% 53% / 0.2);
-  --theme-border: hsla(188deg 40% 24% / var(--alpha));
-  --theme-block: hsla(188deg 24% 24% / var(--alpha));
-  --theme-mark: hsla(188deg 24% 24% / var(--alpha));
-  --theme-codeblock: hsla(188deg 12% 24% / var(--alpha));
-  --text: hsla(188deg 50% 75% / 1);
-  --text-p1: hsla(188deg 80% 80% / 1);
-  --text-p2: hsla(188deg 80% 80% / 0.8);
-  --text-p3: hsla(188deg 80% 80% / 0.6);
-  --text-p4: hsla(188deg 80% 80% / 0.4);
-  --link: hsla(188deg 80% 60% / 1);
-  --link-a20: hsla(188deg 80% 60% / 0.2);
+  --link: hsla(44deg 70% 66% / 1);
+  --link-a20: hsla(44deg 70% 66% / 0.2);
+  --theme-border: hsla(44deg 40% 24% / var(--alpha));
+  --theme-block: hsla(44deg 24% 24% / var(--alpha));
+  --theme-mark: hsla(44deg 24% 24% / var(--alpha));
+  --theme-codeblock: hsla(44deg 12% 24% / var(--alpha));
+  --text: hsla(44deg 50% 75% / 1);
+  --text-p1: hsla(44deg 80% 80% / 1);
+  --text-p2: hsla(44deg 80% 80% / 0.8);
+  --text-p3: hsla(44deg 80% 80% / 0.6);
+  --text-p4: hsla(44deg 80% 80% / 0.4);
+  --link: hsla(44deg 80% 60% / 1);
+  --link-a20: hsla(44deg 80% 60% / 0.2);
 }
 :root[data-theme="dark"] .colorful[color='red'] {
   --hue: 4.105263157894738deg;
@@ -752,27 +752,27 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) .tag-plugin.tag {
-    --hue: 188deg;
-    --sat: 86%;
-    --light: 53%;
+    --hue: 44deg;
+    --sat: 70%;
+    --light: 66%;
     --alpha: 1;
     --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
     --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
     --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
     --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
-    --link: hsla(188deg 86% 53% / 1);
-    --link-a20: hsla(188deg 86% 53% / 0.2);
-    --theme-border: hsla(188deg 40% 24% / var(--alpha));
-    --theme-block: hsla(188deg 24% 24% / var(--alpha));
-    --theme-mark: hsla(188deg 24% 24% / var(--alpha));
-    --theme-codeblock: hsla(188deg 12% 24% / var(--alpha));
-    --text: hsla(188deg 50% 75% / 1);
-    --text-p1: hsla(188deg 80% 80% / 1);
-    --text-p2: hsla(188deg 80% 80% / 0.8);
-    --text-p3: hsla(188deg 80% 80% / 0.6);
-    --text-p4: hsla(188deg 80% 80% / 0.4);
-    --link: hsla(188deg 80% 60% / 1);
-    --link-a20: hsla(188deg 80% 60% / 0.2);
+    --link: hsla(44deg 70% 66% / 1);
+    --link-a20: hsla(44deg 70% 66% / 0.2);
+    --theme-border: hsla(44deg 40% 24% / var(--alpha));
+    --theme-block: hsla(44deg 24% 24% / var(--alpha));
+    --theme-mark: hsla(44deg 24% 24% / var(--alpha));
+    --theme-codeblock: hsla(44deg 12% 24% / var(--alpha));
+    --text: hsla(44deg 50% 75% / 1);
+    --text-p1: hsla(44deg 80% 80% / 1);
+    --text-p2: hsla(44deg 80% 80% / 0.8);
+    --text-p3: hsla(44deg 80% 80% / 0.6);
+    --text-p4: hsla(44deg 80% 80% / 0.4);
+    --link: hsla(44deg 80% 60% / 1);
+    --link-a20: hsla(44deg 80% 60% / 0.2);
   }
   :root:not([data-theme]) .colorful[color='red'] {
     --hue: 4.105263157894738deg;
@@ -1124,7 +1124,7 @@ a.button.start.gradient {
 :root[data-theme="dark"] a.button.start.gradient {
   transition: 0.38s ease-out;
   z-index: 0;
-  background: linear-gradient(120deg, #22d3ee, #38bdf8, #8b5cf6, #22d3ee);
+  background: linear-gradient(120deg, #20242c, #c6a34d, #f3d57a, #62d5ff, #20242c);
   background-size: 1000%;
   color: #fff;
   text-shadow: 0 0 1px rgba(0,0,0,0.12);
@@ -1184,7 +1184,7 @@ a.button.start.gradient {
   :root:not([data-theme]) a.button.start.gradient {
     transition: 0.38s ease-out;
     z-index: 0;
-    background: linear-gradient(120deg, #22d3ee, #38bdf8, #8b5cf6, #22d3ee);
+    background: linear-gradient(120deg, #20242c, #c6a34d, #f3d57a, #62d5ff, #20242c);
     background-size: 1000%;
     color: #fff;
     text-shadow: 0 0 1px rgba(0,0,0,0.12);
@@ -8217,7 +8217,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .logo-wrap a.avatar div.bg {
   width: 100%;
   height: 100%;
-  background: conic-gradient(from 0deg, #22d3ee, #38bdf8, #8b5cf6, #2dd4bf, #22d3ee);
+  background: conic-gradient(from 0deg, #1b1f27, #b52a38, #e7c66b, #f5de91, #62d5ff, #1b1f27);
 }
 .logo-wrap a.avatar img.avatar {
   margin: 2px;
@@ -8419,7 +8419,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   left: 1rem;
   right: 1rem;
   border-radius: 12px;
-  background: linear-gradient(to right, #22d3ee, #38bdf8, #8b5cf6, #22d3ee);
+  background: linear-gradient(to right, #62d5ff, #e7c66b, #f5de91, #b52a38, #62d5ff);
   background-size: 200%;
   animation: search-glow 20s linear infinite;
   opacity: 0;
@@ -8693,7 +8693,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   background-size: cover;
   --inset: 32px;
   --background-opacity: 0.95;
-  background-image: radial-gradient(circle at 20% 15%, rgba(34,211,238,0.28), transparent 34%), radial-gradient(circle at 85% 80%, rgba(139,92,246,0.24), transparent 38%), linear-gradient(160deg, #06101b, #10152b);
+  background-image: radial-gradient(circle at 48% 28%, rgba(231,198,107,0.2), transparent 24%), radial-gradient(circle at 82% 16%, rgba(98,213,255,0.16), transparent 32%), radial-gradient(circle at 12% 88%, rgba(181,42,56,0.12), transparent 34%), linear-gradient(160deg, #0c0f14, #171b22);
   filter: saturate(var(--saturate)) blur(var(--blur-px)) opacity(var(--background-opacity));
 }
 :root[data-theme="dark"] .l_left .sidebg {
@@ -9684,7 +9684,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   display: inline-block;
   width: 12px;
   height: 1.2em;
-  background: #a26ef7;
+  background: #70deff;
   transform: skewX(-20deg);
   margin: 0 0.5em;
   vertical-align: top;
@@ -10557,7 +10557,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   display: inline-block;
   width: 12px;
   height: 1.2em;
-  background: #a26ef7;
+  background: #70deff;
   transform: skewX(-20deg);
   margin: 0 0.5em;
   vertical-align: top;

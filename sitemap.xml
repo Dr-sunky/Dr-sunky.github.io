@@ -74,6 +74,27 @@
 
   
   <url>
+    <loc>https://youngcfd.com/tags/OpenFOAM/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Overset-Mesh/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Fluid-Structure-Interaction/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://youngcfd.com/tags/CFD/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -101,38 +122,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://youngcfd.com/tags/OpenFOAM/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://youngcfd.com/tags/Overset-Mesh/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://youngcfd.com/tags/Fluid-Structure-Interaction/</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://youngcfd.com/categories/CFD-Fundamentals/</loc>
+    <loc>https://youngcfd.com/categories/OpenFOAM/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://youngcfd.com/categories/OpenFOAM/</loc>
+    <loc>https://youngcfd.com/categories/CFD-Fundamentals/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

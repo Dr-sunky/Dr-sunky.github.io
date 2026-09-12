@@ -1,5 +1,5 @@
 /*
- * Content deterrence for Young CFD.
+ * Content deterrence for FlowX.
  * This raises the barrier to casual copying; browser-delivered content can
  * still be recovered by determined visitors or captured in screenshots.
  */
@@ -60,7 +60,7 @@
     display: block;
     margin-top: 2rem;
     color: #666;
-    content: "© Young CFD · youngcfd.com";
+    content: "© FlowX · youngcfd.com";
     font-size: 10pt;
     text-align: center;
   }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Tim&#39;s CFD field</title>
+  <title>FlowX</title>
   
-  <subtitle>Hello, CFD</subtitle>
+  <subtitle>Intelligent Flow</subtitle>
   <link href="https://youngcfd.com/atom.xml" rel="self"/>
   
   <link href="https://youngcfd.com/"/>
