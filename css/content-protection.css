@@ -1,0 +1,67 @@
+/*
+ * Content deterrence for Young CFD.
+ * This raises the barrier to casual copying; browser-delivered content can
+ * still be recovered by determined visitors or captured in screenshots.
+ */
+
+.md-text.content,
+.md-text.content * {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Technical readers still need to select commands and use code-copy buttons. */
+.md-text.content pre,
+.md-text.content pre *,
+.md-text.content code,
+.md-text.content code *,
+.md-text.content input,
+.md-text.content textarea,
+.md-text.content [contenteditable="true"],
+.md-text.content .allow-copy,
+.md-text.content .allow-copy * {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.md-text.content img,
+.md-text.content video {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* A visible overlay also discourages unattributed screenshots. */
+.md-text.content p:has(img),
+.md-text.content .video-player {
+  position: relative;
+}
+
+.md-text.content p:has(img)::after,
+.md-text.content .video-player::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 3;
+  content: "youngcfd.com";
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 0.4rem;
+  color: rgb(255 255 255 / 72%);
+  background: rgb(2 8 23 / 45%);
+  font: 600 0.68rem/1.2 system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 65%);
+}
+
+@media print {
+  .md-text.content::after {
+    display: block;
+    margin-top: 2rem;
+    color: #666;
+    content: "© Young CFD · youngcfd.com";
+    font-size: 10pt;
+    text-align: center;
+  }
+}
