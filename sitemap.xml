@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://dr-sunky.github.io/index.html</loc>
+    <loc>https://youngcfd.com/categories/index.html</loc>
+    
+    <lastmod>2026-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/index.html</loc>
+    
+    <lastmod>2026-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/index.html</loc>
     
     <lastmod>2026-04-04</lastmod>
     
@@ -11,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://dr-sunky.github.io/about/index.html</loc>
+    <loc>https://youngcfd.com/about/index.html</loc>
     
     <lastmod>2026-04-04</lastmod>
     
@@ -20,25 +38,7 @@
   </url>
   
   <url>
-    <loc>https://dr-sunky.github.io/2026/04/04/profile/</loc>
-    
-    <lastmod>2026-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/3-OpenFOAM-Workshop/</loc>
-    
-    <lastmod>2024-05-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/1-CFD-mathematics/</loc>
+    <loc>https://youngcfd.com/2024/05/14/3-OpenFOAM-Workshop/</loc>
     
     <lastmod>2024-05-14</lastmod>
     
@@ -47,7 +47,16 @@
   </url>
   
   <url>
-    <loc>https://dr-sunky.github.io/2024/05/14/2-Foundamental-Theorems-of-Vector-Caculus/</loc>
+    <loc>https://youngcfd.com/2024/05/14/2-Foundamental-Theorems-of-Vector-Caculus/</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/2024/05/14/1-CFD-mathematics/</loc>
     
     <lastmod>2024-05-14</lastmod>
     
@@ -57,13 +66,76 @@
   
 
   <url>
-    <loc>https://dr-sunky.github.io/</loc>
-    <lastmod>2026-04-04</lastmod>
+    <loc>https://youngcfd.com/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://youngcfd.com/tags/CFD/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Mathematics/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Tensor-Calculus/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Vector-Calculus/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/OpenFOAM/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Overset-Mesh/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/tags/Fluid-Structure-Interaction/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://youngcfd.com/categories/CFD-Fundamentals/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://youngcfd.com/categories/OpenFOAM/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
