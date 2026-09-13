@@ -260,6 +260,16 @@
           <span class='name'>Mathematics</span>
         </a>
       
+        <a class='tag' href="/tags/Tensor-Calculus/">
+          <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>Tensor Calculus</span>
+        </a>
+      
+        <a class='tag' href="/tags/Vector-Calculus/">
+          <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
+          <span class='name'>Vector Calculus</span>
+        </a>
+      
         <a class='tag' href="/tags/OpenFOAM/">
           <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>OpenFOAM</span>
@@ -273,16 +283,6 @@
         <a class='tag' href="/tags/Fluid-Structure-Interaction/">
           <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
           <span class='name'>Fluid-Structure Interaction</span>
-        </a>
-      
-        <a class='tag' href="/tags/Tensor-Calculus/">
-          <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
-          <span class='name'>Tensor Calculus</span>
-        </a>
-      
-        <a class='tag' href="/tags/Vector-Calculus/">
-          <svg class="icon" data-icon="default:hashtag" aria-hidden="true"></svg>
-          <span class='name'>Vector Calculus</span>
         </a>
       
     </article>
@@ -873,6 +873,35 @@ Content is licensed under <a target="_blank" rel="noopener" href="https://creati
     }, 'scrollreveal');
   })();
 </script>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"],
+      ],
+      processEscapes: true,
+      skipTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+    },
+    startup: {
+      ready() {
+        MathJax.startup.defaultReady();
+        MathJax.typesetPromise().then(() => {
+          const math = document.querySelectorAll("mjx-container");
+          math.forEach((element) => {
+            if (element.parentNode) {
+              element.parentNode.classList.add("has-jax");
+            }
+          });
+        });
+      },
+    },
+  };
+</script>
+
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 <script>
   stellar.initPlugin(() => {
     const codeElements = document.querySelectorAll('.code');

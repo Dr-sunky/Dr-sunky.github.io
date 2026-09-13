@@ -118,5 +118,5 @@
 /* Stellar adds a '#' permalink marker before h2 headings on tech pages.
    Keep the anchor itself, but keep the landing page headings clean. */
 .l_body[layout="page"] article.content h2 > a:first-child::before {
-  content: none;
+  content: none !important;
 }
