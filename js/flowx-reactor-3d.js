@@ -10,6 +10,7 @@ export function mountFlowXReactor(canvas) {
   const camera = new THREE.PerspectiveCamera(27, 1, 0.1, 100); camera.position.z = 10.2;
   const isMobile = window.innerWidth < 700;
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: !isMobile, powerPreference: 'high-performance' });
+  renderer.setClearColor(0x000000, 0);
   const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? 0.9 : 1.15);
   renderer.setPixelRatio(pixelRatio); renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
   scene.add(new THREE.AmbientLight(0x6b7783, 1.15));
