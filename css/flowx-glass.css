@@ -7,6 +7,8 @@
 
 .l_left,
 .l_right,
+.site-region--leftbar .site-region__surface,
+.site-region--rightbar .site-region__surface,
 .widget-wrapper,
 .article,
 .search-wrapper {
@@ -71,6 +73,8 @@
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .l_left,
   .l_right,
+  .site-region--leftbar .site-region__surface,
+  .site-region--rightbar .site-region__surface,
   .widget-wrapper,
   .article,
   .search-wrapper,
@@ -83,11 +87,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .l_left, .l_right, .widget-wrapper, .article, .search-wrapper { transition: none !important; }
+  .l_left, .l_right, .site-region__surface, .widget-wrapper, .article, .search-wrapper { transition: none !important; }
 }
 
 @media (max-width: 700px) {
-  .l_left, .l_right, .widget-wrapper, .article, .search-wrapper {
+  .l_left, .l_right, .site-region__surface, .widget-wrapper, .article, .search-wrapper {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
   }
@@ -119,4 +123,39 @@
    Keep the anchor itself, but keep the landing page headings clean. */
 .l_body[layout="page"] article.content h2 > a:first-child::before {
   content: none !important;
+}
+
+/* Stellar v2 uses explicit region shells and body layout attributes. */
+.site-region--leftbar .site-region__decoration {
+  background-image:
+    radial-gradient(circle at 48% 28%, rgb(231 198 107 / 20%), transparent 24%),
+    radial-gradient(circle at 82% 16%, rgb(98 213 255 / 16%), transparent 32%),
+    radial-gradient(circle at 12% 88%, rgb(181 42 56 / 12%), transparent 34%),
+    linear-gradient(160deg, #0c0f14, #171b22);
+}
+
+body[data-page-layout="page"] article.content h2 > a:first-child::before {
+  content: none !important;
+}
+
+.card-hover {
+  --card-hover-spotlight-color: rgb(231 198 107 / 22%);
+}
+
+/* Canonical URLs stay unchanged; the local preview is not a backup website. */
+html.flowx-local-preview .canonical-tip {
+  display: none;
+}
+
+/* Blog uses the same native TOC, with readable multi-line article titles. */
+#rightbar-region .flowx-blog-toc .toc .toc-link .toc-text {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.flowx-blog-heading {
+  scroll-margin-top: 32px;
 }
