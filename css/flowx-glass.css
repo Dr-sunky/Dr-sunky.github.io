@@ -159,3 +159,112 @@ html.flowx-local-preview .canonical-tip {
 .flowx-blog-heading {
   scroll-margin-top: 32px;
 }
+
+/* Reading refinements only: existing glass, hover and intro rules stay intact. */
+#main .post-card .excerpt p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.flowx-selected-work {
+  padding: .5rem 1rem;
+  border-inline-start: 2px solid rgb(231 198 107 / 65%);
+  background: rgb(13 18 24 / 35%);
+}
+
+.flowx-visual-case {
+  margin: 1rem 0 2rem;
+}
+
+.flowx-video-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--flowx-glass-border);
+  border-radius: .75rem;
+  background: #0c1016;
+}
+
+.flowx-video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.flowx-media-watermark {
+  position: absolute;
+  inset-block-start: .65rem;
+  inset-inline-end: .65rem;
+  padding: .2rem .5rem;
+  border-radius: .4rem;
+  color: rgb(255 255 255 / 72%);
+  background: rgb(2 8 23 / 45%);
+  font: 600 .68rem/1.2 system-ui, sans-serif;
+  pointer-events: none;
+}
+
+.flowx-video-frame .flowx-media-play {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  padding: .7rem 1rem;
+  border: 1px solid rgb(231 198 107 / 65%);
+  border-radius: .5rem;
+  background: rgb(12 16 22 / 90%);
+  color: #e7c66b;
+  font: 600 .875rem/1.2 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.flowx-video-frame .flowx-media-play[hidden] {
+  display: none;
+}
+
+.flowx-video-frame .flowx-media-play:focus-visible {
+  outline: 2px solid #e7c66b;
+  outline-offset: 3px;
+}
+
+.md-text.content .flowx-visual-case figcaption {
+  margin-top: .6rem;
+  color: var(--text-p1);
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  #main article.md-text.content h2 {
+    font-size: 1.4rem;
+    line-height: 1.45;
+    margin-block: 1.8rem .75rem;
+  }
+
+  #main article.md-text.content h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-block: 1.4rem .65rem;
+  }
+
+  /* Use a bottom navigation strip, not buttons floating over reading lines. */
+  .site-shell {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .site-shell .site-dock {
+    inset-inline: 0;
+    bottom: 0;
+    flex-direction: row;
+    gap: 1rem;
+    padding: .25rem .75rem calc(.25rem + env(safe-area-inset-bottom, 0px));
+    border-radius: 0;
+  }
+
+  .site-shell .site-dock__button {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+  }
+}
