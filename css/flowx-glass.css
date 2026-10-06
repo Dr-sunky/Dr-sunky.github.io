@@ -268,3 +268,32 @@ html.flowx-local-preview .canonical-tip {
     margin: 0;
   }
 }
+
+/* About entry reuses the existing liquid-glass surface and hover effects. */
+#main .flowx-about-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: var(--text-p1);
+  text-decoration: none;
+}
+
+#main article.content .flowx-about-card h2 {
+  margin: 0 0 .75rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+#main .flowx-about-card p {
+  margin: 0 0 1rem;
+}
+
+.flowx-about-card__more {
+  color: var(--link);
+  font-size: .875rem;
+}
+
+#main .flowx-about-card:focus-visible {
+  outline: 2px solid #e7c66b;
+  outline-offset: 4px;
+}
