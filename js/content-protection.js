@@ -6,9 +6,9 @@
 (() => {
   'use strict';
 
-  const protectedContent = '.md-text.content';
+  const protectedContent = '.md-text.content, .flowx-about-bio';
   const copyAllowed = 'pre, code, input, textarea, [contenteditable="true"], .allow-copy';
-  const protectedMedia = `${protectedContent} img, ${protectedContent} video`;
+  const protectedMedia = '.md-text.content img, .md-text.content video';
 
   const elementFor = node => {
     if (!node) return null;

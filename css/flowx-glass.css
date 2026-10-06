@@ -269,31 +269,12 @@ html.flowx-local-preview .canonical-tip {
   }
 }
 
-/* About entry reuses the existing liquid-glass surface and hover effects. */
-#main .flowx-about-card {
-  display: block;
-  padding: 1.5rem;
-  border-radius: 1rem;
+/* The short biography belongs inside the existing About Tim glass banner. */
+#main .article.banner .flowx-about-bio {
+  margin: .75rem 0 0;
   color: var(--text-p1);
-  text-decoration: none;
-}
-
-#main article.content .flowx-about-card h2 {
-  margin: 0 0 .75rem;
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-
-#main .flowx-about-card p {
-  margin: 0 0 1rem;
-}
-
-.flowx-about-card__more {
-  color: var(--link);
-  font-size: .875rem;
-}
-
-#main .flowx-about-card:focus-visible {
-  outline: 2px solid #e7c66b;
-  outline-offset: 4px;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-user-select: none;
+  user-select: none;
 }
